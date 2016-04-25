@@ -3,6 +3,10 @@ $(call inherit-product, vendor/aokp/configs/common_full_phone.mk)
 
 $(call inherit-product, device/samsung/serranodsdd/full_serranodsdd.mk)
 
+#OTA
+PRODUCT_PACKAGES += \
+    CMRemixOTA
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
