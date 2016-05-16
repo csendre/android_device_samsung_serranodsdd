@@ -29,6 +29,9 @@ TARGET_OTA_ASSERT_DEVICE := serranods,serranodsdd,serranodsub,serranodsxx,GT-I91
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := msm8930_serrano_eur_3g_defconfig
 
+# JAVA8 Support
+EXPERIMENTAL_USE_JAVA8 := true
+
 # Radio/Ril class for i9192
 BOARD_RIL_CLASS := ../../../device/samsung/serranodsdd/ril
 COMMON_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
