@@ -27,7 +27,7 @@
 TARGET_OTA_ASSERT_DEVICE := serranods,serranodsdd,serranodsub,serranodsxx,GT-I9192
 
 # JAVA8 Support
-EXPERIMENTAL_USE_JAVA8 := true
+# EXPERIMENTAL_USE_JAVA8 := true
 
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := msm8930_serrano_eur_3g_defconfig
