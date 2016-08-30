@@ -39,9 +39,3 @@ service ril-daemon2 /system/bin/rild -s rild2 -ds rild-debug1 -l /system/lib/lib
     user root
     disabled 
     group radio cache inet misc audio log qcom_diag sdcard_r shell sdcard_rw system drmrpc
-
-    # Backlight notification
-    chown system system /sys/class/misc/backlightnotification/enabled
-    chown system system /sys/class/misc/backlightnotification/blink_control
-    chown system system /sys/class/misc/backlightnotification/notification_led
-    restorecon /sys/class/misc/backlightnotification/enabled
