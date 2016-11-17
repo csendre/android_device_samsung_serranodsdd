@@ -33,6 +33,7 @@ import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
 import android.os.Parcel;
+import android.telephony.ModemActivityInfo;
 import android.os.PowerManager;
 import android.os.SystemProperties;
 import android.os.PowerManager.WakeLock;
@@ -280,7 +281,7 @@ public class SerranoDSRIL extends RIL implements CommandsInterface {
 
     @Override
     protected RILRequest
-    processSolicited (Parcel p) {
+    processSolicited (Parcel p, int type) {
         int serial, error;
         boolean found = false;
         int dataPosition = p.dataPosition(); // save off position within the Parcel
@@ -316,7 +317,7 @@ public class SerranoDSRIL extends RIL implements CommandsInterface {
             p.setDataPosition(dataPosition);
 
             // Forward responses that we are not overriding to the super class
-            return super.processSolicited(p);
+            return super.processSolicited(p, type);
         }
 
 
@@ -370,7 +371,7 @@ public class SerranoDSRIL extends RIL implements CommandsInterface {
 
     @Override
     protected void
-    processUnsolicited (Parcel p) {
+    processUnsolicited (Parcel p, int type) {
         Object ret;
         int dataPosition = p.dataPosition(); // save off position within the Parcel
         int response = p.readInt();
@@ -405,7 +406,7 @@ public class SerranoDSRIL extends RIL implements CommandsInterface {
                 p.setDataPosition(dataPosition);
 
                 // Forward responses that we are not overriding to the super class
-                super.processUnsolicited(p);
+                super.processUnsolicited(p, type);
                 return;
         }
         if (newResponse != response) {
@@ -413,7 +414,7 @@ public class SerranoDSRIL extends RIL implements CommandsInterface {
             p.writeInt(newResponse);
         }
         p.setDataPosition(dataPosition);
-        super.processUnsolicited(p);
+        super.processUnsolicited(p, type);
     }
 
     private void
@@ -587,6 +588,19 @@ public class SerranoDSRIL extends RIL implements CommandsInterface {
     @Override
     public void iccOpenLogicalChannel(String AID, Message response) {
         riljLog("iccOpenLogicalChannel: not supported");
+        if (response != null) {
+            CommandException ex = new CommandException(
+                CommandException.Error.REQUEST_NOT_SUPPORTED);
+            AsyncResult.forMessage(response, null, ex);
+            response.sendToTarget();
+        }
+    }
+
+    /**
+    * @hide
+    */
+    public void getModemActivityInfo(Message response) {
+        riljLog("getModemActivityInfo: not supported");
         if (response != null) {
             CommandException ex = new CommandException(
                 CommandException.Error.REQUEST_NOT_SUPPORTED);
