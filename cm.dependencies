@@ -8,11 +8,17 @@
     "target_path": "device/samsung/msm8930-common"
   },
   {
+    "remote": "aokp",
     "repository": "android_device_samsung_serrano-common",
     "target_path": "device/samsung/serrano-common"
+    "revision": "nougat"
   },
   {
     "repository": "android_kernel_samsung_msm8930-common",
     "target_path": "kernel/samsung/msm8930-common"
+  }
+{
+    "repository": "android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings"
   }
 ]
