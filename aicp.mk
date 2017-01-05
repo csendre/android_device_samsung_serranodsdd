@@ -1,4 +1,3 @@
-
 # Inherit from serranodsdd device
 $(call inherit-product, device/samsung/serranodsdd/device.mk)
 
@@ -13,5 +12,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 PRODUCT_NAME := aicp_serranodsdd
 PRODUCT_DEVICE := serranodsdd
-
-
