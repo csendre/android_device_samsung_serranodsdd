@@ -1,1 +1,1 @@
-add_lunch_combo lineage_serranodsdd-userdebug
+add_lunch_combo xosp_serranodsdd-userdebug
