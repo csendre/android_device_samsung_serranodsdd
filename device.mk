@@ -27,9 +27,10 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/serranodsdd/overlay
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
-# RIL
+# Ramdisk
 PRODUCT_COPY_FILES += \
-    device/samsung/serranodsdd/rild2.rc:system/vendor/etc/init/rild2.rc
+    device/samsung/serranodsdd/init.carrier.rc:root/init.carrier.rc \
+    device/samsung/serranodsdd/init.class_main.sh:root/init.class_main.sh
 
 # FM radio
 PRODUCT_PACKAGES += \
