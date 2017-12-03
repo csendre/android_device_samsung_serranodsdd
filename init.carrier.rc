@@ -30,7 +30,7 @@ service qcom-c_main-sh /system/bin/sh /init.class_main.sh
     oneshot
     
 # for multi rild
-service ril-daemon2 /system/bin/rild -s rild2 -ds rild-debug2 -l /system/lib/libsec-ril-dsds.so
+service ril-daemon2 /system/vendor/bin/rild -s rild2 -ds rild-debug2 -l /system/vendor/lib/libsec-ril-dsds.so
     class main
     socket rild2 stream 660 root radio
     socket rild-debug2 stream 660 radio system
