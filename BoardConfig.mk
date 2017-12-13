@@ -27,6 +27,9 @@
 # Inherit from proprietary vendor
 -include vendor/samsung/serranodsdd/BoardConfigVendor.mk
 
+# RIL
+SIM_COUNT := 2
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := serranods,serranodsdd,serranodsub,serranodsxx
 

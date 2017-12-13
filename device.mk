@@ -29,8 +29,7 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    device/samsung/serranodsdd/init.carrier.rc:root/init.carrier.rc \
-    device/samsung/serranodsdd/init.class_main.sh:root/init.class_main.sh
+    device/samsung/serranodsdd/rild2.rc:system/etc/init/rild2.rc
 
 # FM radio
 PRODUCT_PACKAGES += \

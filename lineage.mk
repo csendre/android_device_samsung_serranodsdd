@@ -27,7 +27,9 @@ PRODUCT_DEVICE := serranodsdd
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
 PRODUCT_MODEL := GT-I9192
+PRODUCT_CHARACTERISTICS := phone
 
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=serranods \
     BUILD_FINGERPRINT="samsung/serranodsdd/serranods:4.4.2/KOT49H/I9192DDUCOF2:user/release-keys" \
