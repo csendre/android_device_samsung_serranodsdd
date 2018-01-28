@@ -2,8 +2,7 @@
 #
 
 # RIL 
-rild.libpath=/system/lib/libsec-ril.so
-rild.libargs=-d /dev/smd0
+rild.libpath=/system/vendor/lib/libsec-ril.so
 
 persist.radio.multisim.config=dsds
 ro.multisim.simslotcount=2
