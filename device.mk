@@ -27,6 +27,14 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/serranodsdd/overlay
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
+# Radio
+PRODUCT_PACKAGES += \
+    qti-telephony-common \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
 # RIL
 PRODUCT_COPY_FILES += \
     device/samsung/serranodsdd/rild2.rc:system/vendor/etc/init/rild2.rc
