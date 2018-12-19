@@ -3,10 +3,6 @@
 # Radio
 vendor/lib/libsec-ril.so
 vendor/lib/libsec-ril-dsds.so
-vendor/lib/libtime_genoff.so
 
 # Audio
 vendor/lib/libaudcal.so
-
-# GPS
-vendor/lib/libloc_api_v02.so
